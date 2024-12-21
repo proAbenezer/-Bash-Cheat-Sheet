@@ -75,7 +75,7 @@ Linux - `xdg-open [dirname]`
 You can open folders, files and even URLs
 
 ```bash
-  open https://traversymedia.com
+  open https://youtube.com
 ```
 
 ## Modifying Files & Directories
@@ -100,16 +100,6 @@ We can also do multiple commands at once with the `&&` operator:
 ```bash
 cd test2 && mkdir test3
 ```
-
-## Right angle bracket >
-
-This symbol tells the system to output results into whatever you specify next. The target is usually a filename. You can use this symbol by itself to create a new file:
-
-```bash
-> [filename]
-```
-
-When you are done, hit `ctrl+D`
 
 ## The `cat` (concatenate) Command
 
@@ -239,7 +229,8 @@ There are a lot more things that you can do with the `grep` command, but it's a 
 
 The `find` command is extremely powerful and is used to find the location of files and directories based on conditions that you specify.
 
-To start off by creating something to work with. Let's create 100 files in the current directory. This is one of those things that I talked about earlier where you can do certain things much faster than you could in the GUI. We already know that the `touch` command will create a file. It can also be used to create multiple files.
+To start off by creating something to work with. Let's create 100 files in the current directory. This is one of those things that I talked about earlier where you can do certain things much faster than you could in the GUI. 
+    `We already know that the `touch` command will create a file. It can also be used to create multiple files.
 
 ```bash
   touch file-{001..100}.txt
@@ -402,7 +393,8 @@ command1 | command2 | command3
 
 ## Redirection
 
-Redirection is the process of changing the default input/output behavior of commands. By default, commands read from standard input (keyboard) and write to standard output (screen). Redirection allows you to send input/output to files or other commands.
+Redirection is the process of changing the default input/output behavior of commands. By default, commands read from standard input (keyboard) and write to standard output (screen).
+Redirection allows you to send input/output to files or other commands.
 
 ### Types of Redirection
 
