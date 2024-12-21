@@ -306,27 +306,6 @@ We can remove all of the files that we created with this command:
 
 There is so much more that you can do with the `find` command, but it goes beyond the scope of this tutorial.
 
-## Piping
-Piping is very powerful. It is a way of redirecting standard output to another destination, such as another file. Let's actually use the find command to find a list of files and then pipe them to a new file.
-
-First, we'll create 10 files:
-
-```bash
-touch file-{001..010}.txt
-```
-
-Now, let's pipe the result from our find into a new file named `output.txt`
-
-```bash
-find . -name "file-0*" > output.txt
-```
-
-You can see the results now in the new file:
-
-```bash
-cat output.txt
-
-
 ## File Compression
 
 `tar` is a program for concatenating multiple files into one big file called a **tarball** and reversing this process by extracting the files from the tarball.
