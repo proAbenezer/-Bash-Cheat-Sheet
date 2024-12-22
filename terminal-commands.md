@@ -100,6 +100,61 @@ We can also do multiple commands at once with the `&&` operator:
 ```bash
 cd test2 && mkdir test3
 ```
+# Wildcards and Flags in Shell Scripting
+
+## 1. What Are Wildcards?
+Wildcards are special characters used to represent unknown characters or patterns in file and directory names.
+
+- **Purpose:** Simplify file selection and manipulation.
+
+### Common Wildcards:
+| Wildcard | Meaning                       | Example                          |
+|----------|-------------------------------|----------------------------------|
+| `*`      | Matches zero or more characters | `ls *.txt` (all `.txt` files)    |
+| `?`      | Matches exactly one character | `ls file?.txt` (`file1.txt`)     |
+| `[ ]`    | Matches a range of characters | `ls file[1-3].txt` (`file1.txt`) |
+| `{ }`    | Matches comma-separated patterns | `ls {file1,file2}.txt`          |
+
+---
+
+## 2. What Are Flags?
+Flags are options used in command-line utilities to modify their behavior.
+
+- **Syntax:** `<command> [flags]`
+
+### Examples:
+| Flag  | Command | Description               | Example              |
+|-------|---------|---------------------------|----------------------|
+| `-l`  | `ls`    | Long listing format       | `ls -l`              |
+| `-a`  | `ls`    | Show hidden files         | `ls -a`              |
+| `-r`  | `cp`    | Copy directories recursively | `cp -r src dest`  |
+| `-i`  | `rm`    | Interactive delete        | `rm -i file.txt`     |
+
+---
+
+## 3. Combining Wildcards and Flags
+Wildcards and flags can be used together for powerful commands.
+
+- **Example 1:** `ls -l *.sh`  
+  Lists all `.sh` files in long format.
+
+- **Example 2:** `rm -i file[1-5]?.txt`  
+  Deletes files interactively that match the pattern.:
+
+---
+
+## 4. Use Cases
+- **Automation:** Select multiple files with `*` for batch processing.  
+- **Safety:** Use `-i` flag to confirm before deleting files.  
+- **Efficiency:** Simplify complex operations with a single command.
+
+---
+
+## 5. Tips and Best Practices
+1. Be cautious with `*` in destructive commands (e.g., `rm *`).
+2. Test with `echo` before executing:
+   ```bash
+   echo rm *.txt  # Preview files to delete
 
 ## The `cat` (concatenate) Command
 
